@@ -13,7 +13,16 @@ const catchphraseButton = document.getElementById('catchphrase-button');
 // set state for how many times the user changes the head, middle, and bottom
 // set state for all of the character's catchphrases
 
+let headCount = 0;
+let middleCount = 0;
+let bottomCount = 0;
+
+const catchphrases = [];
+
 headDropdown.addEventListener('change', () => {
+
+    const value = headDropdown.value
+
     // get the value of the head dropdown
 
     // increment the head change count state
