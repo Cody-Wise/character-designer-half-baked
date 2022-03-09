@@ -21,7 +21,9 @@ const catchphrases = [];
 
 headDropdown.addEventListener('change', () => {
 
-    const value = headDropdown.value
+    const value = headDropdown.value;
+
+    headCount++;
 
     // get the value of the head dropdown
 
@@ -30,10 +32,15 @@ headDropdown.addEventListener('change', () => {
     // update the dom for the head (use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
 
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 
 middleDropdown.addEventListener('change', () => {
+
+    const value = middleDropdown.value;
+
+    middleCount++;
     // get the value of the middle dropdown
 
     // increment the middle change count state
@@ -41,10 +48,15 @@ middleDropdown.addEventListener('change', () => {
     // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
 
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 
 bottomDropdown.addEventListener('change', () => {
+
+    const value = bottomDropdown.value;
+
+    bottomCount++;
     // get the value of the bottom dropdown
 
     // increment the bottom change count state
@@ -52,6 +64,7 @@ bottomDropdown.addEventListener('change', () => {
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
 
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 catchphraseButton.addEventListener('click', () => {
@@ -67,6 +80,8 @@ catchphraseButton.addEventListener('click', () => {
 
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
+
+    reportEl.textContent = `The head has been change ${headCount} times and the middle has been changed ${middleCount} times and the bottom has been changed ${bottomCount} times.`;
 }
 
 function displayCatchphrases() {
