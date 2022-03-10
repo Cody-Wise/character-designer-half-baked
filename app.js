@@ -205,25 +205,4 @@ function displayCatchphrases() {
 
     }
 
-//     const ex = document.getElementById('hat-dropdown');
-
-//     const str = ex.options[ex.selectedIndex].text;
-
-//     console.log(ex);
-
-// const pTag2 = document.createElement('p');
-
-// pTag2.textContent = str;
-
-// historyEl.append(pTag2);
-
-
-
-    // loop through each catchphrase in state
-
-    // and for each catchphrase
-    
-    // create an HTML element with the catchphrase as its text content
-    
-    // and append that HTML element to the cleared-out DOM
 }
