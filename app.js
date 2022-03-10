@@ -116,34 +116,14 @@ phrases.push(newCatchPhrase);
 });
 
 nameButton.addEventListener('click', () => {
-    // get the value of the catchphrase input
-    
-    
-    const nameCharacter = document.createElement('h2');
 
-    nameCharacter.classList.add('namecharacter');
-
-    // if (nameCharacter.textContent === ''){
-
-    //     nameCharacter.textContent = nameInput.value;
-    // }
-
-    // else {
-    //     nameCharacter.textContent = '';
-    // } 
-
-
-    nameCharacter.textContent = nameInput.value;
-
-
-
-    nameEl.append(nameCharacter);
+    nameEl.textContent = nameInput.value;
 
     nameInput.value = '';
 
-    // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
 
 });
+
 
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
