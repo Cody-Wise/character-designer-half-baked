@@ -128,7 +128,7 @@ bottomDropdown.addEventListener('change', () => {
 
     bottomCounter++;
 
-    const ex = document.getElementById('middle-dropdown');
+    const ex = document.getElementById('bottom-dropdown');
 
     const str4 = ex.options[ex.selectedIndex].text;
 
