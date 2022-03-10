@@ -101,6 +101,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
+  
 }
 
 .picker {
@@ -113,17 +114,19 @@ main {
 }
 
 .left, .right {
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
 }
 
 .character {
     display: grid;
-    grid-template-rows: 1.5fr 1fr 2fr;
-    height: 700px;
+    grid-template-rows: 1.5fr 1fr 2fr 2fr;
+    height: 695px;
     width: 200px;
 }
 
@@ -134,8 +137,31 @@ main {
 
 }
 
+.bg bottom{
+    height:100%
+}
+
 .catchphrase {
     font-size: 2rem;
     font-family: cursive;
     text-align: center;
+}
+
+.phrase{
+    font-size: 2rem;
+    font-family: cursive;
+    text-align: center;
+}
+
+#name{
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.history{
+
+    margin:5px;
+
 }
