@@ -12,6 +12,10 @@ const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
 const nameEl = document.getElementById('name');
+const historyEl = document.getElementById('history');
+const historyE2 = document.getElementById('history2');
+const historyE3 = document.getElementById('history3');
+const historyE4 = document.getElementById('history4');
 const nameInput = document.getElementById('name-input');
 const nameButton = document.getElementById('name-button');
 
@@ -29,6 +33,19 @@ hatDropdown.addEventListener('change', () => {
     const hatValue = hatDropdown.value;
 
     hatCounter++;
+
+    const ex = document.getElementById('hat-dropdown');
+
+    const str = ex.options[ex.selectedIndex].text;
+
+
+    const pTag2 = document.createElement('p');
+
+    pTag2.textContent = str;
+
+    pTag2.classList.add('history');
+
+    historyEl.append(pTag2);
 
     // get the value of the head dropdown
 
@@ -48,6 +65,19 @@ headDropdown.addEventListener('change', () => {
 
     headCounter++;
 
+    const ex = document.getElementById('head-dropdown');
+
+    const str2 = ex.options[ex.selectedIndex].text;
+
+
+    const pTag3 = document.createElement('p');
+
+    pTag3.textContent = str2;
+
+    pTag3.classList.add('history');
+
+    historyE2.append(pTag3);
+
     // get the value of the head dropdown
 
     // increment the head change count state
@@ -66,6 +96,19 @@ middleDropdown.addEventListener('change', () => {
     const middleValue = middleDropdown.value;
 
     middleCounter++;
+
+    const ex = document.getElementById('middle-dropdown');
+
+    const str3 = ex.options[ex.selectedIndex].text;
+
+
+    const pTag4 = document.createElement('p');
+
+    pTag4.textContent = str3;
+
+    pTag4.classList.add('history');
+
+    historyE3.append(pTag4);
     // get the value of the middle dropdown
 
     // increment the middle change count state
@@ -84,6 +127,19 @@ bottomDropdown.addEventListener('change', () => {
     const bottomValue = bottomDropdown.value;
 
     bottomCounter++;
+
+    const ex = document.getElementById('middle-dropdown');
+
+    const str4 = ex.options[ex.selectedIndex].text;
+
+
+    const pTag5 = document.createElement('p');
+
+    pTag5.textContent = str4;
+
+    pTag5.classList.add('history');
+
+    historyE4.append(pTag5);
     // get the value of the bottom dropdown
 
     // increment the bottom change count state
@@ -148,6 +204,20 @@ function displayCatchphrases() {
         catchphrasesEl.append(pTag);
 
     }
+
+//     const ex = document.getElementById('hat-dropdown');
+
+//     const str = ex.options[ex.selectedIndex].text;
+
+//     console.log(ex);
+
+// const pTag2 = document.createElement('p');
+
+// pTag2.textContent = str;
+
+// historyEl.append(pTag2);
+
+
 
     // loop through each catchphrase in state
 
