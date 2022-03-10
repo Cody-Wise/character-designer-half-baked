@@ -119,12 +119,13 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
 }
 
 .character {
     display: grid;
     grid-template-rows: 1.5fr 1fr 2fr 2fr;
-    height: 700px;
+    height: 695px;
     width: 200px;
 }
 
