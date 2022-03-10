@@ -113,6 +113,7 @@ main {
 }
 
 .left, .right {
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -122,7 +123,7 @@ main {
 
 .character {
     display: grid;
-    grid-template-rows: 1.5fr 1fr 2fr;
+    grid-template-rows: 1.5fr 1fr 2fr 2fr;
     height: 700px;
     width: 200px;
 }
@@ -132,6 +133,10 @@ main {
     background-repeat: no-repeat;
     background-position: center;
 
+}
+
+.bg bottom{
+    height:100%
 }
 
 .catchphrase {
@@ -144,4 +149,11 @@ main {
     font-size: 2rem;
     font-family: cursive;
     text-align: center;
+}
+
+.namecharacter{
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: capitalize;
 }

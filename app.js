@@ -1,7 +1,9 @@
 // import functions and grab DOM elements
+const hatDropdown = document.getElementById('hat-dropdown');
 const headDropdown = document.getElementById('head-dropdown');
 const middleDropdown = document.getElementById('middle-dropdown');
 const bottomDropdown = document.getElementById('bottom-dropdown');
+const hatEl = document.getElementById('hat');
 const headEl = document.getElementById('head');
 const middleEl = document.getElementById('middle');
 const bottomEl = document.getElementById('bottom');
@@ -9,15 +11,36 @@ const reportEl = document.getElementById('report');
 const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
+const nameEl = document.getElementById('name');
+const nameInput = document.getElementById('name-input');
+const nameButton = document.getElementById('name-button');
 
 // set state for how many times the user changes the head, middle, and bottom
 // set state for all of the character's catchphrases
-
+let hatCounter = 0;
 let headCounter = 0;
 let middleCounter = 0;
 let bottomCounter = 0;
 
 const phrases = [];
+
+hatDropdown.addEventListener('change', () => {
+
+    const hatValue = hatDropdown.value;
+
+    hatCounter++;
+
+    // get the value of the head dropdown
+
+    // increment the head change count state
+    
+    // update the dom for the head (use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
+
+    hatEl.style.backgroundImage = `url("./assets/${hatValue}-hat.png")`;
+
+    // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
+});
 
 headDropdown.addEventListener('change', () => {
 
@@ -92,10 +115,40 @@ phrases.push(newCatchPhrase);
 
 });
 
+nameButton.addEventListener('click', () => {
+    // get the value of the catchphrase input
+    
+    
+    const nameCharacter = document.createElement('h2');
+
+    nameCharacter.classList.add('namecharacter');
+
+    // if (nameCharacter.textContent === ''){
+
+    //     nameCharacter.textContent = nameInput.value;
+    // }
+
+    // else {
+    //     nameCharacter.textContent = '';
+    // } 
+
+
+    nameCharacter.textContent = nameInput.value;
+
+
+
+    nameEl.append(nameCharacter);
+
+    nameInput.value = '';
+
+    // update the dom to show the new catchphrases (refactor to/call displayCatchphrases to do this work)
+
+});
+
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
 
-    reportEl.textContent = `The head has been changed ${headCounter} times, the middle has been changed ${middleCounter} times, and the bottom has been changed ${bottomCounter} times.`;
+    reportEl.textContent = `The hat has been changed ${hatCounter} times, the head has been changed ${headCounter} times, the middle has been changed ${middleCounter} times, and the bottom has been changed ${bottomCounter} times.`;
 }
 
 function displayCatchphrases() {
